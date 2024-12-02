@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+function changename(){
+  const names=["earn","grow","go"];
+  const ind = Math.floor(Math.random()*3);
+  // console.log(ind);
+  return names[ind]
+  // return ind
+}
+
+function App(){
+  const name="HELLO USER";
+  return(
+    <div>
+    <p>{name}</p>
+    <p> "earn","grow","go" will change </p>
+    <h1>lets {changename()}</h1>
     </div>
   );
 }
-
 export default App;
